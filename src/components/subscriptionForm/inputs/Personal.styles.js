@@ -14,7 +14,7 @@ export const StyledField = styled.fieldset`
     width: 100%;
     padding: 10px;
     border: 1px outset black;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: ${({ theme }) => theme.colors.gray};
     font-size: 16px;
     outline: none;

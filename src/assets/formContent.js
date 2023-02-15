@@ -13,18 +13,24 @@ export const formContent = [
         type: "text",
         label: "Name",
         placeholder: "e.g. Stephen King",
+        required: true,
+        autoComplete: "off",
       },
       {
         id: 1.2,
         type: "email",
         label: "Email Address",
         placeholder: "e.g. stephenking@lorem.com",
+        required: true,
+        autoComplete: "off",
       },
       {
         id: 1.3,
         type: "tel",
         label: "Phone Number",
         placeholder: "e.g. +1 234 567 890",
+        required: true,
+        autoComplete: "off",
       },
     ],
   },
@@ -39,6 +45,10 @@ export const formContent = [
         value: "Arcade",
         name: "plan",
         icon: <ArcadePlan />,
+        bill: {
+          mo: 9,
+          yr: 90,
+        },
       },
       {
         id: 2.2,
@@ -46,6 +56,10 @@ export const formContent = [
         value: "Advanced",
         name: "plan",
         icon: <AdvancedPlan />,
+        bill: {
+          mo: 12,
+          yr: 120,
+        },
       },
       {
         id: 2.3,
@@ -53,6 +67,10 @@ export const formContent = [
         value: "Pro",
         name: "plan",
         icon: <ProPlan />,
+        bill: {
+          mo: 15,
+          yr: 150,
+        },
       },
     ],
   },
@@ -60,10 +78,34 @@ export const formContent = [
     id: 3,
     title: "Pick add-ons",
     description: "Add-ons help enhance your gaming experience.",
+    inputs: [
+      {
+        id: 3.1,
+        type: "checkbox",
+        value: "Online service",
+        description: "Access to multiplayer games",
+        price: { mo: 1, yr: 10 },
+      },
+      {
+        id: 3.2,
+        type: "checkbox",
+        value: "Larger storage",
+        description: "Extra 1TB of cloud save",
+        price: { mo: 2, yr: 20 },
+      },
+      {
+        id: 3.3,
+        type: "checkbox",
+        value: "Customizable profile",
+        description: "Custom theme on your profile",
+        price: { mo: 2, yr: 20 },
+      },
+    ],
   },
   {
     id: 4,
     title: "Finishing up",
     description: "Double-check everything looks OK before confirming.",
+    inputs: [{ id: 4.1 }],
   },
 ];
