@@ -19,6 +19,14 @@ export const StyledForm = styled.form`
     padding-top: 0px;
     max-width: 250px;
   }
+  @media screen and (min-width: 1024px) {
+    transform: translateY(0);
+    min-width: 500px;
+    p {
+      max-width: none;
+      margin-bottom: 40px;
+    }
+  }
 `;
 
 export const BtnWrapper = styled.div`
@@ -30,8 +38,10 @@ export const BtnWrapper = styled.div`
   align-items: center;
   border-radius: 10px;
   margin-top: 15px;
+  padding: 15px 0;
   p {
     font-size: 14px;
+    margin: 0;
     &:first-of-type {
       font-weight: ${({ discount }) => !discount && "bold"};
       color: ${({ theme, discount }) => !discount && theme.colors.navy};
@@ -62,5 +72,14 @@ export const BtnWrapper = styled.div`
         discount ? `translate(20px, -50%)` : `translate(0px, -50%)`};
       transition: transform 0.5s cubic-bezier(0, 1.25, 0.96, 0.96);
     }
+  }
+`;
+
+export const InnerWrapper = styled.div`
+  @media screen and (min-width: 1024px) {
+    display: ${({ step }) => step == 2 && "flex"};
+    flex-direction: ${({ step }) => step == 2 && "row"};
+    gap: ${({ step }) => step == 2 && "20px"};
+    justify-content: space-between;
   }
 `;

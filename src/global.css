@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #eef5ff;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

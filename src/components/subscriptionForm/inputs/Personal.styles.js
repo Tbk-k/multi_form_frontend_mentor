@@ -19,4 +19,10 @@ export const StyledField = styled.fieldset`
     font-size: 16px;
     outline: none;
   }
+  @media screen and (min-width: 1024px) {
+    label {
+      font-size: 14px;
+    }
+
+  }
 `;

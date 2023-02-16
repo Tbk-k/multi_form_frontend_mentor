@@ -42,4 +42,11 @@ export const StyledLabel = styled.label`
       color: ${({ theme }) => theme.colors.navy};
     }
   }
+  @media screen and (min-width: 1024px) {
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    min-height: 150px;
+    padding: 20px;
+  }
 `;

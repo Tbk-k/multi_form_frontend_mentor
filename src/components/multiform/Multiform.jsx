@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { formContent } from "../../assets/formContent";
 import Sidebar from "../sidebar/Sidebar";
 import SubscriptionForm from "../subscriptionForm/SubscriptionForm";
-import { Wrapper } from "./Multiform.styles";
+import { InnerWrapper, Wrapper } from "./Multiform.styles";
 import Formnav from "../formnav/Formnav";
 
 const Multiforms = () => {
@@ -21,8 +21,14 @@ const Multiforms = () => {
   return (
     <Wrapper>
       <Sidebar />
-      <SubscriptionForm {...formContent[step - 1]} handleValid={handleValid} />
-      <Formnav step={step} isValid={isValid} handleValid={handleValid}/>
+      <InnerWrapper>
+        <SubscriptionForm
+          {...formContent[step - 1]}
+          handleValid={handleValid}
+          step={step}
+        />
+        <Formnav step={step} />
+      </InnerWrapper>
     </Wrapper>
   );
 };

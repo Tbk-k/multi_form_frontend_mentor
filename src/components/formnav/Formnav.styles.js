@@ -26,4 +26,7 @@ export const Wrapper = styled.nav`
       padding: 15px 20px;
     }
   }
+  @media screen and (min-width: 1024px) {
+    position: relative;
+  }
 `;
